@@ -1,4 +1,4 @@
-package com.example.cukiernie_wawa
+package com.michalkaczor.cukiernie_wawa
 
 import io.flutter.embedding.android.FlutterActivity
 

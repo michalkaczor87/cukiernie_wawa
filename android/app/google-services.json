@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "199895681399",
+    "project_id": "cukiernie-wawa-1",
+    "storage_bucket": "cukiernie-wawa-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:199895681399:android:102f871a92053d3346f972",
+        "android_client_info": {
+          "package_name": "com.michalkaczor.cukiernie_wawa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "199895681399-74fp1rvirv9bu27gmpr949el6g68253n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZSpN4HhS4Qkdlk-gz04f1w8JC7C3_ga0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "199895681399-74fp1rvirv9bu27gmpr949el6g68253n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
