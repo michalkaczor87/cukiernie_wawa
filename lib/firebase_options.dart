@@ -63,7 +63,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '199895681399',
     projectId: 'cukiernie-wawa-1',
     storageBucket: 'cukiernie-wawa-1.appspot.com',
-    iosClientId: '199895681399-rv20ckglt7ni9nqbirdjh2a4bqikobal.apps.googleusercontent.com',
+    iosClientId:
+        '199895681399-rv20ckglt7ni9nqbirdjh2a4bqikobal.apps.googleusercontent.com',
     iosBundleId: 'com.michalkaczor.cukiernieWawa',
   );
 }
