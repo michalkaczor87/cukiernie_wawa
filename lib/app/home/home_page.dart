@@ -1,3 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cukiernie_wawa/app/home/add_opinion/add_opinion_page_content.dart';
+import 'package:cukiernie_wawa/app/home/my_account/my_account_page_content.dart';
+import 'package:cukiernie_wawa/app/home/restaurants/restaurants_page_content.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -19,33 +23,22 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Najlepsze cukiernie w warszawie'),
+      ),
       body: Builder(builder: (context) {
         if (currentIndex == 0) {
-          return Center(
-            child: Text('Jeden'),
-          );
+          return const RestaurantsPageContent();
         }
         if (currentIndex == 1) {
-          return Center(
-            child: Text('Dwa'),
-          );
+          return AddOpinionPageContent(onSave: () {
+            setState(() {
+              currentIndex = 0;
+            });
+          });
         }
 
-        return Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Jesteś zalogowany jako ${widget.user.email}'),
-              const SizedBox(height: 20),
-              ElevatedButton(
-                onPressed: () {
-                  FirebaseAuth.instance.signOut();
-                },
-                child: const Text('Wyloguj się'),
-              ),
-            ],
-          ),
-        );
+        return MyAccountPageContent(email: widget.user.email);
       }),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
@@ -58,6 +51,10 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.reviews),
             label: 'Opinie',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add),
+            label: 'Dodaj',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
